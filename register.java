@@ -9,7 +9,6 @@ import java.awt.Container;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
@@ -34,10 +33,8 @@ public class register extends JFrame implements ActionListener{
     
      private final  Container con;
      static boolean durum=false;
+   
     //yapıcı
-    
-     
-     
      
     public register()
     {
