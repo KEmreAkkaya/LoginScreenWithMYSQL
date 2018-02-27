@@ -44,7 +44,6 @@ public class register extends JFrame implements ActionListener{
         setSize(425,450);
         setLayout(null);
         setAlwaysOnTop(true);
-        //setBackground(Color.red);
         setResizable(false);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -110,7 +109,7 @@ public class register extends JFrame implements ActionListener{
         
     }
     
-     static boolean eMail(String msj) //E-Mail Kontrolu
+     public boolean eMail(String msj) //E-Mail Kontrolu
     {
         durum=false;
         
