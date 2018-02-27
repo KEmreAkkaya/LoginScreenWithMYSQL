@@ -9,9 +9,10 @@ import java.sql.PreparedStatement;
 
 
 public class sql {
+    
     private final String kadi="root";
     private final String sifre="1234";
-
+    //register javadaki her bir TextField alanindaki veriyi alip ,veritabaninda işliyor.
     public void baglanti(String m1,String m2,int m3,int m4,String m5)
     {
         
