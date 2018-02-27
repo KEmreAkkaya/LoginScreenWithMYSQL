@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.swing.JFrame;
@@ -14,36 +13,63 @@ import javax.swing.JOptionPane;
 
 public class register extends JFrame implements ActionListener{
     
-     private final JButton buton1=new JButton("Kaydet");
-     private final JLabel metin1=new JLabel("İsim");
-     private final JLabel metin2=new JLabel("Soyisim");
-     private final JLabel metin3=new JLabel("Yaş");
-     private final JLabel metin4=new JLabel("Telefon");
-     private final JLabel metin5=new JLabel("Email");
-     private final JTextField textalani1=new JTextField();
-     private final JTextField textalani2=new JTextField();
-     private final JTextField textalani3=new JTextField();
-     private final JTextField textalani4=new JTextField();
-     private final JTextField textalani5=new JTextField();
+     private final JButton buton1;
+     private final JLabel metin1;
+     private final JLabel metin2;
+     private final JLabel metin3;
+     private final JLabel metin4;
+     private final JLabel metin5;
+     private final JTextField textalani1;
+     private final JTextField textalani2;
+     private final JTextField textalani3;
+     private final JTextField textalani4;
+     private final JTextField textalani5;
     
-     private String msj1=null,msj2=null,msj3=null,msj4=null,msj5=null;    
-     private int kontrol1=0,kontrol2=0,kontrol3=0,kontrol4=0,kontrol5=0;    // Eğer textalanları hata içermiyorsa(doğruysa)  1 döndersin.
-     private int y;
-     private int t;
+     private String msj1,msj2,msj3,msj4,msj5;    
+     private int kontrol1,kontrol2,kontrol3,kontrol4,kontrol5;    // Eğer textalanları hata içermiyorsa(doğruysa)  1 döndersin.
+     private int y; //yas alani     
+     private int t; //telefon alani
     
      private final  Container con;
-     static boolean durum=false;
-   
+     static boolean durum;
+    
+
     //yapıcı
-     
+    
+    
     public register()
-    {
-       
+    {  
         
+        buton1=new JButton("Kaydet");
+        metin1=new JLabel("Isim");
+        metin2=new JLabel("Soyisim");
+        metin3=new JLabel("Yas");
+        metin4=new JLabel("Telefon");
+        metin5=new JLabel("E-Mail");
+        
+        //-----------------------------------
+        textalani1=new JTextField();
+        textalani2=new JTextField();
+        textalani3=new JTextField();
+        textalani4=new JTextField();
+        textalani5=new JTextField();
+         
+        //-----------------------------------
+        msj1=msj2=msj3=msj4=msj5=null; 
+        
+        //-----------------------------------
+        kontrol1=kontrol2=kontrol3=kontrol4=kontrol5=0;
+        
+        //-----------------------------------
+        y=t=0;
+        durum=false;
+        
+       
         setTitle("KAYIT");
         setSize(425,450);
         setLayout(null);
         setAlwaysOnTop(true);
+        //setBackground(Color.red);
         setResizable(false);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -350,7 +376,7 @@ public class register extends JFrame implements ActionListener{
             
           if(kontrol1==1 && kontrol2==1 && kontrol3==1 && kontrol4==1 && kontrol5==1)
           {
-              SQL baglan=new SQL();
+              sql baglan=new sql();
               baglan.baglanti(msj1,msj2,y,t,msj5);
               
               JOptionPane.showMessageDialog(null,"BASARIYLA KAYDEDILDI","SONUC",JOptionPane.INFORMATION_MESSAGE);
